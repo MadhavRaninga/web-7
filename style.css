@@ -1,0 +1,710 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Asap", sans-serif;
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255,255,255);
+    padding-inline: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+.nav-left{
+    width: 70px;
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-left svg{
+     font-size: 15px;
+     cursor: pointer;
+}
+.nav-left a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+}
+.nav-left a:hover{
+    color: rgb(94, 94, 94);
+}
+.nav-center{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 38%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.nav-center::before{
+     position: absolute;
+     content: "";
+     width: 0;
+     height: 100%;
+     left: 0;
+     top: 0;
+    background-color: rgb(179, 179, 184);
+     transition: 0.7s;
+     cursor: pointer;
+}
+.nav-center:hover:before{
+    width: 100%;
+
+}
+.nav-center img{
+    width: 55%;
+  z-index: 1;
+  color: white;
+
+}
+.nav-center img:hover{
+    color: white;
+}
+.hero{
+    width: 100%;
+    height: 88vh;
+    background-image: url(./assets/img1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 4%;
+    padding-right: 1.5%;
+}
+.hero h1{
+    color: white;
+    padding-top: 28.5%;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 40px;
+}
+.hero h4{
+    color: RGB(229, 229, 229);
+    font-size: 20px;
+    margin-top: 13px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+.hero button{
+    width: 158px;
+    height: 56px;
+    margin-top: 17px;
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+.hero button:hover{
+    background-color: RGB(179, 179, 179);
+    cursor: pointer;
+    color: RGB(0, 0, 0);
+    transition: 0.3s;
+}
+.meseg{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(245, 5, 55);
+    /* float: right; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-left: 90%;
+    margin-top: -70px;
+    cursor: pointer;
+}
+.meseg svg{
+    color: white;
+    font-size: 40px;
+}
+.hero1{
+    width: 100%;
+    height: 300px;
+}
+.hero-top{
+    width: 100%;
+    height: 70px;
+    padding-inline: 4%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.hero-top p{
+    font-size: 19px;
+    margin-top: 10px;
+
+}
+.line{
+    width: 60px;
+    height: 1px;
+    background-color: black;
+    margin-top: 2.5px;
+}
+.hero-bottom{
+    width: 95%;
+    height: 180px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+}
+.slide-contenor{
+    width: 100%;
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 9));
+    }
+}
+.slide-img{
+    display: flex;
+    flex-direction: column;
+   padding: 5px;
+    height: 150px;
+    align-items: center;
+}
+.slide-img img{
+    transition: trasform 1s;
+}
+.slide-img img:hover{
+     transform: scale(1.15);
+     transition: 0.8s;
+}
+.slide-img h3{
+    font-weight: 500;
+    font-size: 19px;
+    color: RGB(76, 76, 76);
+}
+.slide-img h3:hover{
+    font-weight: 700;
+    color: RGB(76, 76, 76);
+    text-decoration: underline;
+    transition: 0.3s;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    padding-inline: 4.5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-left{
+    width: 50%;
+    height: inherit;
+    overflow: hidden;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/img2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.8s;
+
+}
+.img:hover{
+    transform: scale(1.06);
+    transition: 0.8s;
+
+}
+.main-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 3%;
+}
+.main-right h1{
+    color: RGB(51, 51, 51);
+    font-weight: 400;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    line-height: 45px;
+    margin-top: 190px;
+}
+.main-right button{
+    width: 157px;
+    height: 60px;
+    background-color: black;
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    margin-top: 45px;
+    cursor: pointer;
+
+}
+.main-right button:hover{
+    background-color: RGB(76, 76, 76);
+    cursor: pointer;
+    transition: 0.3s;
+    color: rgb(228, 223, 223);
+    -webkit-box-shadow: -1px 2px 42px -3px rgba(0,0,0,0.33);
+    -moz-box-shadow: -1px 2px 42px -3px rgba(0,0,0,0.33);
+    box-shadow: -1px 2px 42px -3px rgba(0,0,0,0.33);
+}
+.main2{
+    width: 100%;
+    height: 100vh;
+    padding-inline: 4.5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 85px;
+     
+}
+.img2{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/img3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.8s;
+}
+.img2:hover{
+    transform: scale(1.06);
+    transition: 0.8s;
+
+}
+.main3{
+    width: 100%;
+    height: 240vh;
+    margin-top: 40px;
+    background-image: url(https://www.audi.in/content/dam/nemo/in/3_O-Homepage/E-tronHub-2878X3500.jpg?auto=webp&width=1439);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-left: 4%;
+    position: relative;
+
+}
+.card{
+    width: 55%;
+    height: 320px;
+    background-color: white;
+    top: 25%;
+    position: absolute;
+    padding-inline: 3.5%;
+    padding-block: 3%
+}
+.card h1{
+    color: RGB(51, 51, 51);
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+.card p{
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(71, 71, 71);
+    margin-top: 30px;
+    line-height: 25px;
+}
+.button{
+    width: 63%;
+    height: 70px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.button button{
+    width: 165px;
+    height: 55px;
+    background-color: black;
+    border: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+}
+.button button:hover{
+    background-color: RGB(76, 76, 76);
+    cursor: pointer;
+    transition: 0.3s;
+    color: rgb(206, 201, 201);
+    -webkit-box-shadow: -1px 2px 42px -3px rgba(0,0,0,0.33);
+    -moz-box-shadow: -1px 2px 42px -3px rgba(0,0,0,0.33);
+    box-shadow: -1px 2px 42px -3px rgba(0,0,0,0.33);
+}
+#b2{
+    height: 55px;
+    width: 237px;
+    background-color: transparent;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    color: RGB(51, 51, 51);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    border-top: 1px solid rgb(53, 53, 53);
+    border-bottom: 1px solid rgb(53, 53, 53);
+
+}
+#b2:hover{
+    color: rgb(126, 126, 126);
+    transition: 0.3s;
+}
+.map{
+    width: 100%;
+    height: 81vh;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.map-left{
+    width: 33%;
+    height: inherit;
+    background-color: rgb(0,0,0);
+    padding-left: 4.5%;
+    padding-block: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.map-left h1{
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+.map-left button{
+    width: 250px;
+    height: 58px;
+    background-color: transparent;
+    color: white ;
+    border: 1px solid white;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+
+}
+.map-left button::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(85, 85, 85);
+    transition: 0.8s;
+    z-index: -1;
+
+}
+.map-left button:hover:before{
+    width: 100%;
+}
+.map-right{
+    width: 67%;
+    height: 100%;
+}
+.map-right iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.mobile{
+    width: 100%;
+    height: 120vh;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mobile-left{
+    width: 60%;
+    height: inherit;
+    background-color: rgb(0,0,0);
+    padding-inline: 5%;
+    padding-top: 28%;
+
+}
+.mobile-left p{
+    color: white;
+    font-size: 32.5px;
+    letter-spacing: 2px;
+    color: RGB(229, 229, 229);
+    line-height: 43px;
+}
+.mobile-left h1{
+    color: rgb(229,229,229);
+    margin-top: 10px;
+    letter-spacing: 4px;
+}
+.box{
+    width: 53.9%;
+    height: 68px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box button{
+    width: 210px;
+    height: 55px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+}
+.box button:hover{
+    color: RGB(179, 179, 179);
+    border: 1px solid RGB(179, 179, 179);
+}
+.box button::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(85, 85, 85);
+    transition: 0.8s;
+    z-index: -1;
+
+}
+.box button:hover:before{
+    width: 100%;
+}
+#shop{
+    width: 150px;
+    
+}
+.mobile-right{
+    width: 40%;
+    height: 100%;
+    background-image: url(https://www.audi.in/content/dam/nemo/in/3_O-Homepage/122_Audi-App-Post_1534-X-1534px_WC.jpg?width=767);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.other{
+    width: 100%;
+    height: 60vh;
+    margin-top: 70px;
+    padding-inline: 4%;
+}
+.other-top{
+    width: 100%;
+    height: 70px;
+
+}
+.other-top h1{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 38px;
+    font-weight: 600;
+}
+.other-bottom{
+    width: 100%;
+    height: 80.5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bottom1{
+    width: 33%;
+    height: 100%;
+}
+.bottom1-top{
+    width: 100%;
+    height: 75%;
+}
+.bottom1-top img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.bottom1-bottom{
+    width: 100%;
+    height: 25%;
+}
+.bottom1-bottom p{
+    font-size: 18px;
+    margin-top: 8px;
+    font-weight: 400;
+}
+.click{
+    width: 100%;
+    height: 30px;
+    margin-top: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.click h4{
+     font-size: 16px;
+     letter-spacing: 1px;
+     cursor: pointer;
+}
+.click h4:hover{
+     color: rgb(78, 78, 78);
+}
+.click i{
+    font-size: 23px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#date{
+    font-weight: 400;
+    font-size: 18px;
+}
+.footer{
+    width: 100%;
+    height: 143vh;
+    background-color: rgb(0,0,0);
+    margin-top: 80px;
+    padding-inline: 5%;
+}
+.back{
+    width: 9%;
+    height: 60px;
+    margin-left: 91%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.back p{
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    font-size: 13px;
+}
+.back i{
+    color: rgb(211, 211, 211);
+    font-size: 28px;
+    cursor: pointer;
+}
+.back p:hover{
+     color: rgb(187, 187, 187);
+     transition: 0.2s;
+}
+.back i:hover{
+    color: rgb(187, 187, 187);
+    transition: 0.2s;
+
+}
+.footer-top{
+    width: 90%;
+    height: 370px;
+    /* border: 1px solid white; */
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.ftop1{
+    width: 290px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.ftop1 h4{
+    color: rgb(206, 206, 206);
+    font-weight: 350;
+    font-size: 20px;
+    margin-bottom: 17px;
+}
+.ftop1 p{
+    color: white;
+    margin-top: 15px;
+    font-size: 13.5px;
+    cursor: pointer;
+    position: relative;
+}
+.ftop1 p:hover{
+    color: rgb(177, 177, 177);
+    transition: 0.2s;
+}
+.footer-bottom{
+    width: 57%;
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+}
+.icon{
+    width: 100%;
+    height: 60px;
+    border-bottom: 0.5px solid rgb(167, 167, 167);
+}
+.iconi{
+    width: 300px;
+    height: inherit;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.ic{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ic:hover{
+    background-color: rgba(175, 175, 175, 0.288);
+}
+.ic i{
+    color: white;
+}
+.last{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.last p{
+    color: white;
+    font-size: 13px;
+}
+.div{
+    width: 31%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 35px;
+}
+.div a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 300;
+}
+.div a:hover{
+    color: RGB(217, 217, 217);
+}
